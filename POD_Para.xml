@@ -1,0 +1,30 @@
+<variables>
+	<variable name="N_STATE_in">0</variable>                                             <!-- The status key of FEM. 0-thermal simulation, 1- read solutions -->
+	<variable name="l_in">0.014</variable>                                               <!-- Length of chip -->
+	<variable name="w_in">0.012</variable>                                               <!-- Width of chip -->
+	<variable name="h_in">0.0002977976</variable>                                        <!-- Thickness of chip -->
+	<variable name="ls_in">200</variable>                                                <!-- Number of grid in length -->
+	<variable name="ws_in">200</variable>                                                <!-- Number of grid in width -->
+	<variable name="hs_in">17</variable>                                                 <!-- Number of grid in thichness -->
+	<variable name="num_steps_in">240</variable>                                         <!-- Number of time step for training -->
+	<variable name="num_steps_pre_in">240</variable>                                     <!-- Number of time step for prediction -->
+	<variable name="T_in">7.5e-4</variable>                                              <!-- Total simulation time -->
+	<variable name="t_in">0</variable>                                                   <!-- The start of simulation time -->
+	<variable name="h_c_in">2.40598e4</variable>                                         <!-- The heat transfer coefficient for convective BCs -->
+	<variable name="Ta_in">0.0</variable>                                                <!-- The ambient temperature -->                                           
+	<variable name="Nu_in">11</variable>                                                 <!-- Number of functional units of processor floorplan -->
+	<variable name="thick_actl_in">0.0000557976</variable>                               <!-- Thickness of device layer -->
+	<variable name="thick_Sio2_in">0.0000557976</variable>                               <!-- Thickness of Sio2 layer -->
+	<variable name="chip_area_in">0.0</variable>                                         
+	<variable name="tol_in">1e-14</variable>                                             <!-- The tolerance of numerical simulation -->
+	<variable name="k_0_in">100.0</variable>                                             <!-- Thermal conductivity of device layer and substrate -->                        
+	<variable name="k_1_in">1.2</variable>                                               <!-- Thermal conductivity of Sio2 -->
+	<variable name="D0_in">2.33e3</variable>                                             <!-- Density of device layer and substrate -->
+	<variable name="D1_in">2.65e3</variable>                                             <!-- Density of Sio2 -->
+	<variable name="c0_in">751.1</variable>                                              <!-- Specific heat of device layer and substrate -->
+	<variable name="c1_in">680</variable>                                                <!-- Specific heat of Sio2 -->
+	<variable name="num_modes_in">20</variable>                                          <!--Number of modes to train -->
+	<variable name="num_modes_pre_in">10</variable>                                      <!--Number of modes used to perform thermal simulation -->
+	<variable name="Flp_path_in">../../Floorplan_AMD.txt</variable>                      <!--Floorplan of chip -->
+	<variable name="Power_path_in">../../powertrace_AMD_240.txt</variable>               <!--Dynamic power maps -->
+</variables>
