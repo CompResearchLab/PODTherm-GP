@@ -31,7 +31,7 @@ PODTherm-GP includes several components and each C++ component can be compiled i
  ```
  mpirun -n 20 ./Therm_FEM
  ```
-where 20 is the number of processes. However, for this version PODTherm-GP, [ODE solver](https://github.com/WilbertJiang/PODTherm_GP/tree/main/ODE_Solver_CU) doesn't support MPI.   
+where 20 is the number of processes. However, for this version PODTherm-GP, [ODE solver](https://github.com/CompResearchLab/PODTherm-GP/tree/main/ODE_Solver_CU) doesn't support MPI.   
 
 # Dependencies
 **FEniCS platform installation**:  
@@ -60,7 +60,7 @@ sudo apt-get install --no-install-recommends fenics
 
 # POD Model Training
 The entire training process of PODTherm-GP includes three steps.  
-**1. Training data collection:** The training temperature data for the generation of PODTherm-GP can be collected via direct numerical simulations (DNSs) such as the finite element method (FEM), or experimental measurements. In this project, we collect the temperature data via FEniCS using FEM and the code located in [./Data_Collection_FEM](https://github.com/WilbertJiang/PODTherm_GP/tree/main/Data_Collection_FEM). It can be performed by the following  
+**1. Training data collection:** The training temperature data for the generation of PODTherm-GP can be collected via direct numerical simulations (DNSs) such as the finite element method (FEM), or experimental measurements. In this project, we collect the temperature data via FEniCS using FEM and the code located in [./Data_Collection_FEM](https://github.com/CompResearchLab/PODTherm-GP/tree/main/Data_Collection_FEM). It can be performed by the following  
 
 ```
 mpirun -n 20 ./Therm_FEM
@@ -100,7 +100,7 @@ cd ./Calculate_P/build
 cd ../..  
 ```
 # Thermal Simulation via PODTherm-GP  
-After [POD Model Training](https://github.com/WilbertJiang/PODTherm_GP/blob/main/README.md#pod-model-training), PODTherm-GP is ready to perform thermal simulations of the semiconductor chips. It can be done as follows   
+After [POD Model Training](https://github.com/CompResearchLab/PODTherm-GP#pod-model-training), PODTherm-GP is ready to perform thermal simulations of the semiconductor chips. It can be done as follows   
 Fristly, create a `pod_result` folder to store the result.  
 ```
 mkdir pod_result  
@@ -122,7 +122,7 @@ python Post_Processing.py
 ```
 If the LS error isn't required, you can modify `Post_Processing.py` to perform the post processing over the region of interest and some of time steps.
 # Example of AMD ATHLON II X4 610e CPU
-In this repo, a simple example is given by the thermal simulation of AMD ATHLON II X4 610e CPU whose floorpan is shown at below, and all parameters are included in [POD_Para.xml](https://github.com/WilbertJiang/PODTherm_GP/blob/main/POD_Para.xml). The training and prediction dynamic power maps are [powertrace_AMD_240.txt](https://github.com/WilbertJiang/PODTherm_GP/blob/main/powertrace_AMD_240.txt) and [powertrace_AMD_240_pre.txt](https://github.com/WilbertJiang/PODTherm_GP/blob/main/powertrace_AMD_240_pre.txt), respectively, which can be specified via ` <variable name="Power_path_in">../../powertrace_AMD_240.txt</variable>` in the [POD_Para.xml](https://github.com/WilbertJiang/PODTherm_GP/blob/main/POD_Para.xml).
+In this repo, a simple example is given by the thermal simulation of AMD ATHLON II X4 610e CPU whose floorpan is shown at below, and all parameters are included in [POD_Para.xml](https://github.com/CompResearchLab/PODTherm-GP/blob/main/POD_Para.xml). The training and prediction dynamic power maps are [powertrace_AMD_240.txt](https://github.com/CompResearchLab/PODTherm-GP/blob/main/powertrace_AMD_240.txt) and [powertrace_AMD_240_pre.txt](https://github.com/CompResearchLab/PODTherm-GP/blob/main/powertrace_AMD_240_pre.txt), respectively, which can be specified via ` <variable name="Power_path_in">../../powertrace_AMD_240.txt</variable>` in the [POD_Para.xml](https://github.com/CompResearchLab/PODTherm-GP/blob/main/POD_Para.xml).
 
 <p align="center">
 <img src="Floorplan_AMD_CPU.png" alt="Floorplan of AMD CPU" width="500">
@@ -133,7 +133,7 @@ The example can be run step by step as described in this `README.md` or using th
  ./Model_Training.sh  
 ./Prediction_Model.sh  
 ```
-When you use the above shell scripts, it should be kept in mind that you should use different dynamic power maps for the training and demonstration of PODTherm-GP by changing ` <variable name="Power_path_in">../../powertrace_AMD_240.txt</variable>` in the [POD_Para.xml](https://github.com/WilbertJiang/PODTherm_GP/blob/main/POD_Para.xml).
+When you use the above shell scripts, it should be kept in mind that you should use different dynamic power maps for the training and demonstration of PODTherm-GP by changing ` <variable name="Power_path_in">../../powertrace_AMD_240.txt</variable>` in the [POD_Para.xml](https://github.com/CompResearchLab/PODTherm-GP/blob/main/POD_Para.xml).
 
 The LS error of AMD ATHLON II X4 610e CPU example over the entire spatial and temporal domain is
 
