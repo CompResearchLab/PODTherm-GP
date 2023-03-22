@@ -59,7 +59,7 @@ sudo apt-get install --no-install-recommends fenics
 ```
 
 # POD Model Training
-The entire training process of PODTherm-GP includes three steps.  
+The entire training process of PODTherm-GP can be divided into three steps.  
 **1. Training data collection:** The training temperature data for the generation of PODTherm-GP can be collected via direct numerical simulations (DNSs) such as the finite element method (FEM), or experimental measurements. In this project, we collect the temperature data via FEniCS using FEM and the code located in [./Data_Collection_FEM](https://github.com/CompResearchLab/PODTherm-GP/tree/main/Data_Collection_FEM). It can be performed by the following  
 
 ```
