@@ -35,7 +35,7 @@ where 20 is the number of processes. However, for this version PODTherm-GP, [ODE
 
 # Dependencies
 **FEniCS platform installation**:  
-PODTherm-GP thermal simulator is developed on the FEniCS platform, which provides a flexible framework for solving partial differential equations (PDEs) using finite element methods. FEniCS should be pre-installed using the following command:  
+PODTherm-GP thermal simulator is developed on the FEniCS platform(version 2019.1.0), which provides a flexible framework for solving partial differential equations (PDEs) using finite element methods. FEniCS should be pre-installed using the following command:  
 ```
 sudo apt-get install --no-install-recommends software-properties-common  
 sudo add-apt-repository ppa:fenics-packages/fenics  
