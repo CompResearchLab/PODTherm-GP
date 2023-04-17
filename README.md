@@ -130,7 +130,9 @@ In this repo, a simple example is given by the thermal simulation of AMD ATHLON 
 
 The example can be run step by step as described in this `README.md` or using the shell script
  ```
+ chmod +x Model_Training.sh
  ./Model_Training.sh  
+ chmod +x Prediction_Model.sh
 ./Prediction_Model.sh  
 ```
 When you use the above shell scripts, it should be kept in mind that you should use different dynamic power maps for the training and demonstration of PODTherm-GP by changing ` <variable name="Power_path_in">../../powertrace_AMD_240.txt</variable>` in the [POD_Para.xml](https://github.com/CompResearchLab/PODTherm-GP/blob/main/POD_Para.xml).
