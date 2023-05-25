@@ -6,8 +6,7 @@ This `README.md` provides tutorial-like details on how to install and use PODThe
 [1] L. Jiang, Y. Liu and M. -C. Cheng, "Fast Accurate Full-Chip Dynamic Thermal Simulation with Fine Resolution Enabled by a Learning 
     Method," in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, doi: 10.1109/TCAD.2022.3229598.
 
-[2] L. Jiang, A. Dowling, M. -C. Cheng and Y. Liu, "PODTherm-GP: A Physics-based Data-Driven Approach for Effective Architecture-Level 
-    Thermal Simulation of Multi-Core CPUs,"  submitted to IEEE Transactions on Computers.
+[2] L. Jiang, A. Dowling, M. -C. Cheng and Y. Liu, "PODTherm-GP: A Physics-based Data-Driven Approach for Effective Architecture-Level Thermal Simulation of Multi-Core CPUs," in IEEE Transactions on Computers, doi: 10.1109/TC.2023.3278535.
 ```
 # Overview
 PODTherm-GP is enabled by the proper orthogonal decomposition (POD), which projects the physical domain of processors onto the POD space represented by a finite set of basis functions (also called POD modes). In addition, the physical principle is also incorporated into PODTherm-GP via the Galerkin projection (GP), which provides a physical guidance to thermal simulations. The results show that PODTherm-GP is able to offer dynamic temperature solutions efficiently and accurately within and beyond training range.  The whole workflow of this approach constitutes the training of PODTherm-GP and its demonstration as shown in the below figure where [Gem5](https://www.gem5.org/) and [McPAT](https://code.google.com/archive/p/mcpat/) are CPU and power simulators, respectively. The detailed information can be found in [ISCAS2022](https://ieeexplore.ieee.org/abstract/document/9937274).
