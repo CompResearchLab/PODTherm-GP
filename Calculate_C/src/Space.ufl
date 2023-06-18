@@ -1,0 +1,22 @@
+element = FiniteElement("Lagrange", tetrahedron, 1)
+element2 = FiniteElement("Lagrange", tetrahedron, 2)
+
+oelem = FiniteElement("Discontinuous Lagrange", tetrahedron, 0)
+
+
+
+DS1=Coefficient(oelem)
+sc=Coefficient(oelem)
+
+u1=Coefficient(element)
+u2=Coefficient(element)
+
+u = TrialFunction(element)
+v = TestFunction(element)
+
+a = u*v*dx
+L = v*dx
+
+C=DS1*sc*dot(u1,u2)*dx
+
+forms=[a,L,C]
